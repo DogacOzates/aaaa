@@ -1,0 +1,42 @@
+<!-- 静的ファイルのルートディレクトリ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <!-- Load scripts -->
+  <!-- deferを記載しないと先にjsを読み込むのでエラーになる -->
+  <script src="js/rooms.js" defer></script>
+  <!-- index.jsを先に書くと、usersModuleを読み込んでいないのに実行しようとしてエラーになる -->
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Rooms</h1>
+    <!-- <label for="search">ユーザー名で検索</label>
+    <input type="text" id="search" />
+    <button id="search-btn">検索</button> -->
+    <a href="create.html">Create a new room</a>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Room name</th>
+          <th>Registered Date</th>
+          <th>Updated Date</th>
+          <th>Menu</th>
+          <th>Menu</th>
+        </tr>
+      </thead>
+      <!-- jsでidを取得してtbodyに入れていく -->
+      <tbody id="rooms-list">
+
+      </tbody>
+    </table>
+  </main>
+</body>
+
+</html>
